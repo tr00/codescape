@@ -1,3 +1,3 @@
 # codescape
 
-Alle Lösungen
+Alle optimalen Lösungen
