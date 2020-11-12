@@ -1,0 +1,30 @@
+import codescape.Dogbot;
+public class MyDogbot extends Dogbot {
+
+    public void run() {
+        String m = "0003110110400210211010";
+        
+        for(int i = 0; i < m.length(); i++) {
+            switch(m.charAt(i)) {
+            case '0':
+                move();
+                break;
+            case '1':
+                turnLeft();
+                break;
+            case '2':
+                pickUp();
+                break;
+            case '3':
+                if(isMovePossible())
+                    i = m.indexOf('4');
+                break;
+            case '4':
+                i = m.indexOf('3') - 1;
+                break;
+            }
+        }
+    }
+
+
+}
